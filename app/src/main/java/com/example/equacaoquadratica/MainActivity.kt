@@ -32,10 +32,11 @@ class MainActivity : AppCompatActivity() {
     fun calcularDelta(a:Double,b:Double,c:Double)
     {
        var delta=Math.pow(b,2.0)-4*a*c
+        binding.lblResultado.setText("")
        if(delta<0.0)
        {
            binding.lblConta.setText("Sem Raizes Delta menor que 0.0")
-           binding.lblResultado.setText(delta.toString())
+           binding.lblResultado.setText("Delta = "+delta.toString())
        }else{
 
            calcularRaizes(a,b,c,delta);
@@ -45,6 +46,14 @@ class MainActivity : AppCompatActivity() {
 
     fun calcularRaizes(a:Double,b: Double,c: Double,delta:Double)
     {
-        
+        var conta="     "+a+"x² "+b +"x "+c;
+
+        binding.lblConta.setText(conta)
+
+        var x1=String.format("%.2f",(-b+Math.sqrt(delta))/2*a)
+        var x2=String.format("%.2f",(-b-Math.sqrt(delta))/2*a)
+
+        binding.lblResultado.setText("x1=${x1},x2=${x2}")
+
     }
 }

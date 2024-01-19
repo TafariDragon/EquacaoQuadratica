@@ -14,7 +14,7 @@
         android:layout_marginBottom="31dp"
         android:ems="10"
         android:hint="Introduza Valor A"
-        android:inputType="number|numberDecimal"
+        android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintBottom_toTopOf="@+id/txtB"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -26,7 +26,7 @@
         android:layout_marginBottom="44dp"
         android:ems="10"
         android:hint="Introduza Valor B"
-        android:inputType="number|numberDecimal"
+        android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintBottom_toTopOf="@+id/txtC"
         app:layout_constraintStart_toStartOf="@+id/txtA"
         app:layout_constraintTop_toBottomOf="@+id/txtA" />
@@ -38,7 +38,7 @@
         android:layout_marginBottom="53dp"
         android:ems="10"
         android:hint="Introduza Valor C"
-        android:inputType="number|numberDecimal"
+        android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
         app:layout_constraintStart_toStartOf="@+id/txtB"
         app:layout_constraintTop_toBottomOf="@+id/txtB" />
@@ -74,6 +74,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-light"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/lblResultado"
         app:layout_constraintEnd_toStartOf="@+id/lblResultado"
         app:layout_constraintStart_toStartOf="@+id/lblResultado"
